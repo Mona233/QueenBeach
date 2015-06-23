@@ -4,4 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="splash" />
+    <string name="main" />
+    <string name="about" />
+    <string name="book" />
+    <string name="contact" />
+    <string name="location" />
 </resources>

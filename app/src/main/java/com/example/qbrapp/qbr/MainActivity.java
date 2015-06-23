@@ -1,17 +1,27 @@
 package com.example.qbrapp.qbr;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        configureImageButtonAbout();
+        //configureImageButtonBook();
+        //configureImageButtonContact();
+        //configureImageButtonLocation();
     }
 
     @Override
@@ -35,4 +45,20 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void configureImageButtonAbout(){
+        ImageButton btn = (ImageButton) findViewById(R.id.vAbout);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        About.class
+                );
+                    startActivity(i);
+            }
+        });
+    }
+
 }
