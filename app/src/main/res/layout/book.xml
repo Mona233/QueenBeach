@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/vBook">
+    android:id="@+id/vBook"
+    android:touchscreenBlocksFocus="false">
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,5 +11,115 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Book a date"
         android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Fill the form please"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffa7732f" />
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/name"
+        android:layout_height="wrap_content"
+        android:hint="@string/splash"
+        android:inputType="textPersonName"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp"
+        android:text="@string/name"
+        android:gravity="center"
+        android:textColor="#ffa7732f">
+    </EditText>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_height="wrap_content"
+        android:hint="@string/splash"
+        android:inputType="textEmailAddress"
+        android:layout_width="fill_parent"
+        android:text="@string/email"
+        android:gravity="center"
+        android:textColor="#ffa7732f"
+        android:layout_below="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp">
+    </EditText>
+
+    <Spinner
+        android:id="@+id/apartmentsSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/apartments"
+        android:entries="@array/apartmentsList"
+        android:layout_below="@+id/email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center">
+    </Spinner>
+
+
+    <Spinner
+        android:id="@+id/adultsSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/apartments"
+        android:entries="@array/adultsList"
+        android:layout_below="@+id/apartmentsSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center">
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/childrenSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/apartments"
+        android:entries="@array/childrenList"
+        android:layout_below="@+id/adultsSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <DatePicker
+        android:id="@+id/dpResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/childrenSpinner"
+        android:layout_centerHorizontal="true" />
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

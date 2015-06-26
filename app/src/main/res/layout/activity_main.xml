@@ -1,10 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/relative">
+    android:id="@+id/relative"
+    android:clickable="false">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/vAbout"
+        android:id="@+id/btnAbout"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -30,33 +31,31 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/book"
-        android:src="@drawable/book"
-        android:layout_alignTop="@+id/vAbout"
+        android:id="@+id/btnBook"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:longClickable="false"
-        android:contentDescription="@string/book" />
+        android:src="@drawable/book"
+        android:clickable="false" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/contact"
-        android:src="@drawable/contact"
-        android:layout_below="@+id/vAbout"
+        android:id="@+id/btnLocation"
+        android:src="@drawable/location"
+        android:layout_below="@+id/btnAbout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="43dp"
-        android:contentDescription="@string/contact" />
+        android:layout_marginTop="34dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/location"
-        android:layout_alignBottom="@+id/contact"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/location"
-        android:contentDescription="@string/location" />
+        android:id="@+id/btnContact"
+        android:layout_alignTop="@+id/btnLocation"
+        android:layout_toRightOf="@+id/btnLocation"
+        android:layout_toEndOf="@+id/btnLocation"
+        android:src="@drawable/contact" />
+
 
 </RelativeLayout>

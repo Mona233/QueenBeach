@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/vAbout">
+    android:id="@+id/btnContact">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="About"
+        android:text="About Queen Beach Resort"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="- Luxury apartments for rent -"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffa7732f"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Just 15 kilometers from Zadar is a place Ninske Vodice, where, on the very beach, we positioned our exclusive apartments in 5 luxury duplex houses. Nin, a beautiful tourist destination, is a real meditarenean city, and Queen Beach Resort is perfectly placed within the characteristic dalmatian architecture. Positioned in a beautiful lagoon, surrounded by perfectly preserved nature, and only about a 10 minutes walk away from the historical city Nin, Queen Beach Resort is the most exiting new resort on the Adriatic coast and the ideal place for a perfect holiday in Dalmatia."
+        android:id="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="12dp"
+        android:gravity="center"/>
+
+</RelativeLayout>

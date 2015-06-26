@@ -1,27 +1,35 @@
 package com.example.qbrapp.qbr;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
 
+//main activity with image buttons in it
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.sound);
+        mediaPlayer.start();
+
+        /**getActionBar().setDisplayShowHomeEnabled(true);
+        getActionBar().setIcon(R.mipmap.ic_launcher);**/
+
         configureImageButtonAbout();
-        //configureImageButtonBook();
-        //configureImageButtonContact();
-        //configureImageButtonLocation();
+        configureImageButtonBook();
+        configureImageButtonContact();
+        configureImageButtonLocation();
     }
 
     @Override
@@ -46,8 +54,9 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+//button about calling its class/view
     private void configureImageButtonAbout(){
-        ImageButton btn = (ImageButton) findViewById(R.id.vAbout);
+        ImageButton btn = (ImageButton) findViewById(R.id.btnAbout);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,4 +70,51 @@ public class MainActivity extends Activity {
         });
     }
 
+    //button book a date calling its class/view
+    private void configureImageButtonBook(){
+        ImageButton btn = (ImageButton) findViewById(R.id.btnBook);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        Book.class
+                );
+                startActivity(i);
+            }
+        });
+    }
+
+    //button contact calling its class/view
+    private void configureImageButtonContact(){
+        ImageButton btn = (ImageButton) findViewById(R.id.btnContact);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        Contact.class
+                );
+                startActivity(i);
+            }
+        });
+    }
+
+    //button location calling its class/view
+    private void configureImageButtonLocation(){
+        ImageButton btn = (ImageButton) findViewById(R.id.btnLocation);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        Location.class
+                );
+                startActivity(i);
+            }
+        });
+    }
 }

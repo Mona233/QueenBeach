@@ -2,10 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.qbrapp.qbr" >
 
+    <supports-screens android:resizeable="true"
+    android:smallScreens="true"
+    android:normalScreens="true"
+    android:largeScreens="true"
+    android:xlargeScreens="true"
+    android:anyDensity="true"
+    />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:label="@string/QueenBeachResort"
         android:theme="@style/AppTheme" >
 
         <activity
@@ -20,7 +29,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/QueenBeachResort" >
             <intent-filter>
                 <action android:name="com.example.qbrapp.qbr.MAINACTIVITY" />
 
@@ -43,6 +52,26 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.qbrapp.qbr.BOOK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Location"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.qbrapp.qbr.LOCATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Contact"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.qbrapp.qbr.CONTACT" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

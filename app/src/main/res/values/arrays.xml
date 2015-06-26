@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apartmentsList">
+        <item>@string/select</item>
+        <item>@string/a1</item>
+        <item>@string/a2</item>
+        <item>@string/a3</item>
+        <item>@string/a4</item>
+    </string-array>
+
+    <string-array name="adultsList">
+        <item>@string/selectAdults</item>
+        <item>@string/adult1</item>
+        <item>@string/adult2</item>
+        <item>@string/adult3</item>
+        <item>@string/adult4</item>
+        <item>@string/adult5</item>
+        <item>@string/adult6</item>
+    </string-array>
+
+    <string-array name="childrenList">
+        <item>@string/selectChildren</item>
+        <item>@string/children1</item>
+        <item>@string/children2</item>
+        <item>@string/children3</item>
+        <item>@string/children4</item>
+        <item>@string/children5</item>
+        <item>@string/children6</item>
+    </string-array>
+
+</resources>
